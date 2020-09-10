@@ -14,8 +14,9 @@ def gambling():
     days_of_months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     name_of_months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     month_result = 'Win'
+    usr_input = 'Y'
     month_number = 0
-    while (month_result == 'Win') and ((month_number+1) < len(days_of_months)):
+    while (month_result == 'Win') and ((month_number+1) < len(days_of_months)) and (usr_input == 'Y' or usr_input == 'Y'):
         """ Begin While Loop till win at Month level"""
         win_in_month = []
         loss_in_month = []
@@ -46,6 +47,7 @@ def gambling():
         print ('Net result for ', name_of_months[month_number],' Month: ', net_result_in_month)
         if (net_result_in_month) > 0:
             month_result = 'Win'
+            usr_input = input("Do you wish to continue (Y/N)?")
         else:
             month_result = 'Loss'
 
